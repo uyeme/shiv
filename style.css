@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+   background: url(9.jpg);
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-color: #75E6DA;
+   z-index: -1;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.nav {
+    background-color: #05445E;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #D4F1F4;
+    font-size: 28px;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu ul li {
+    display: inline;
+}
+
+.nav-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.nav-menu ul li a.active {
+    background-color: #00A0F3;
+    padding: 5px 10px;
+    border-radius: 5px;
+ }
+
+.nav-menu ul li a:hover {
+    color: #00A0F3;
+    text-decoration: underline;
+}
+
+
+.nav-button .btn {
+    padding: 10px 20px;
+    background-color: #14202E;
+    border: none;
+    border-radius: 5px;
+    color: #7EC8E3;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.nav-button .btn:hover {
+    background-color: #001285;
+    color: #88A9C3;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.form-box {
+    background-color: #189AB4;
+    padding: 30px;
+    width: 400px;
+    box-shadow: 0 0 10px #050A30;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #05445E;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+ 
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 40px;
+    border: 1px solid #05445E;
+    border-radius: 5px;
+    color: #05445E;
+    transition: 150ms ease;
+}
+.input-box .error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+.input-box i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.input-box input:focus {
+    border-color: #293e82;
+}
+
+/* Form Submit Button */
+.form-box .submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #293e82;
+    color: #BFBBED;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-box .submit:hover {
+    background-color: #14202E;
+   color: #D4F1F4;
+}
+
+.about-section {
+    text-align: center;
+    color: black;
+
+} 
+
+.about-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.about-section p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+/* Footer */
+footer {
+    background-color: #05445E;
+    color: white; 
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin-bottom: 10px;
+    color: white;
+}
+
+footer div a {
+    color: white; 
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer div a:hover {
+    text-decoration: underline;
+    color: #00A0F3; 
+}
+
+footer p a {
+    color: #D4F1F4; 
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+    color: white;}
+
+    @media only screen and (max-width: 768px) {
+        .wrapper {
+            padding: 10px; /* Reduce padding */
+        }
+    
+        .nav {
+            flex-direction: column; /* Stack navigation items vertically */
+            align-items: flex-start; /* Align items to the left */
+        }
+    
+        .nav-menu ul {
+            flex-direction: column; /* Stack menu items vertically */
+            gap: 10px; /* Adjust gap for stacked items */
+        }
+    
+        .form-container {
+            flex-direction: column; /* Stack forms vertically */
+            padding: 20px; /* Reduce padding */
+        }
+    
+        .form-box {
+            width: 100%; /* Full width for forms */
+            margin: 10px 0; /* Add some vertical spacing */
+        }
+    
+        .about-section h2 {
+            font-size: 28px; /* Adjust heading size */
+        }
+    
+        .about-section p {
+            font-size: 16px; /* Adjust paragraph size */
+        }
+    
+        footer {
+            font-size: 14px; /* Adjust footer font size */
+        }
+    
+        .nav-button .btn {
+            width: 100%; /* Make buttons full width */
+            margin-bottom: 10px; /* Add spacing between buttons */
+        }
+    }
+    
+ 

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>E-health</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="logo">
+                <h1>Mobile Health</h1>
+            </div>
+            <div class="nav-menu" id="navmenu">
+                <ul>
+                    <li><a href="index.html" class="link active">Home</a></li>
+                    <li><a href="consult.html" class="link">Consultations</a></li>
+                    <li><a href="health-resources.html" class="link">Health resources</a></li>
+                    <li><a href="services.html" class="link">Services</a></li>
+                    
+                </ul>
+            </div>
+                <div class="nav-button">
+                <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+                <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+            </div>
+        </nav>
+              <!-- Sign in Form -->
+            <div class="form-container">
+            <div class="form-box" id="signInForm">
+                <h2>Sign In</h2>
+                <div class="input-box">
+                    <input required type="text" class="input-field" placeholder="Email">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input required type="password" class="input-field" placeholder="Password">
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <button class="submit">Sign In</button>
+                <p>Don't have an account? <a href="#" id="goToSignUp">Sign Up</a></p>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div class="form-box" id="signUpForm">
+                <h2>Sign Up</h2>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Full Name" required>
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                </div>
+                
+                <div class="input-box">
+                    <input  type="number" class="input-field" placeholder="Age" required>
+                    <i class="bx bx-user"></i>
+                </div>
+                
+                <div class="input-box">
+                    <label for="country">country:</label>
+                    <select id="country" name="country">
+                        <option value="none">Select a country</option>
+                        <option value="Nig">Nigeria</option>
+                        <option value="SA">South Africa</option>
+                        <option value="Ken">Kenya</option>
+                        <option value="Gh">Ghana</option>
+                        <option value="Ug">Uganda</option>
+                    </select>
+                </div>
+                
+                <div class="input-box">
+                    <input type="email" class="input-field" placeholder="Email" required>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="Password" required>
+                    <p>Password must be at least &lt;8 characters long.</p>
+                <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="Confirm Password"  required>
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+
+                <label for="terms">
+                    <input type="checkbox" id="terms" name="terms"> I agree to the <a href="#">terms and conditions</a>.
+                </label>
+                <button class="submit">Sign Up</button>
+                <p>Already have an account? <a href="#" id="goToSignIn">Sign In</a></p>
+            </div>
+        </div>
+        </div>
+     
+        <section class="about-section">
+            <h2>Why Choose Us?</h2>
+            <p>We provide reliable and accessible online medical consultations,<br>
+                 making healthcare available to everyone, no matter where you are.<br>
+                  Our certified doctors are available to help you manage your health effectively.</p>
+        </section>
+
+        <footer>
+            <p>&copy;2024 Telemedicine Service</p>
+            <div>
+                <a href="#">Facebook</a>
+                <br>
+                <a href="#">Twitter</a>
+                <br>
+                <a href="#">Instagram</a>
+            </div>
+            <p>Contact us at: support@mobilehealth.com<br>
+                Phone No: +234-81048275234
+            </p>
+        </footer>
+    </body>
+</html>
