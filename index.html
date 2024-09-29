@@ -8,6 +8,7 @@
    <title>E-health</title>
    <link rel="stylesheet" href="style.css">
    <script src="script.js" defer></script>
+   <script src="validate.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -25,44 +26,51 @@
                 </ul>
             </div>
                 <div class="nav-button">
-                <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
-                <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+                <button class="btn white-btn" id="loginBtn">Sign In</button>
+                <button class="btn" id="registerBtn">Sign Up</button>
             </div>
         </nav>
               <!-- Sign in Form -->
+               <form id="form" onsubmit="return validateForm()">
             <div class="form-container">
             <div class="form-box" id="signInForm">
                 <h2>Sign In</h2>
                 <div class="input-box">
-                    <input required type="text" class="input-field" placeholder="Email">
+                    <input type="text" class="input-field" placeholder="Email">
                     <i class="bx bx-user"></i>
+                    <span id="emailError" class="error"></span>
                 </div>
                 <div class="input-box">
-                    <input required type="password" class="input-field" placeholder="Password">
+                    <input type="password" class="input-field" placeholder="Password">
                     <i class="bx bx-lock-alt"></i>
+                    <span id="passwordError" class="error"></span>
                 </div>
                 <button class="submit">Sign In</button>
                 <p>Don't have an account? <a href="#" id="goToSignUp">Sign Up</a></p>
             </div>
+        </form>
 
             <!-- Sign Up Form -->
+            <form id="form" onsubmit="return validateForm()">
             <div class="form-box" id="signUpForm">
                 <h2>Sign Up</h2>
                 <div class="input-box">
-                    <input type="text" class="input-field" placeholder="Full Name" required>
+                    <input type="text" id="name" class="input-field" placeholder="Full Name">
                     <i class="bx bx-user"></i>
+                    <span id="nameError" class="error"></span>
                 </div>
                 <div class="input-box">
                     <label for="male">Male</label>
-                    <input type="radio" id="male" name="gender" value="male" required>
+                    <input type="radio" id="male" name="gender" value="male">
                     
                     <label for="female">Female</label>
-                    <input type="radio" id="female" name="gender" value="female" required>
+                    <input type="radio" id="female" name="gender" value="female">
                 </div>
                 
                 <div class="input-box">
-                    <input  type="number" class="input-field" placeholder="Age" required>
+                    <input  type="number" id="age" class="input-field" placeholder="Age">
                     <i class="bx bx-user"></i>
+                    <span id="ageError" class="error"></span>
                 </div>
                 
                 <div class="input-box">
@@ -78,25 +86,31 @@
                 </div>
                 
                 <div class="input-box">
-                    <input type="email" class="input-field" placeholder="Email" required>
-                    <i class='bx bxs-envelope'></i>
+                    <input type="email" id="email" class="input-field" placeholder="Email">
+                    <span id="emailError" class="error"></span>
                 </div>
                 <div class="input-box">
-                    <input type="password" class="input-field" placeholder="Password" required>
-                    <p>Password must be at least &lt;8 characters long.</p>
+                    <input type="password" id="password" class="input-field" placeholder="Password">
                 <i class="bx bx-lock-alt"></i>
+                <span id="passwordError" class="error"></span>
                 </div>
                 <div class="input-box">
-                    <input type="password" class="input-field" placeholder="Confirm Password"  required>
+                    <input type="password" id="repeatpassword" class="input-field" placeholder="Confirm Password">
                     <i class="bx bx-lock-alt"></i>
+                    <span id="repeatpasswordError" class="error"></span>
                 </div>
-
+                <div>
                 <label for="terms">
                     <input type="checkbox" id="terms" name="terms"> I agree to the <a href="#">terms and conditions</a>.
+                    <span>I agree to the terms and conditions</span><br>
+                    <span id="checkboxError" class="error"></span>
                 </label>
+            </div>
+            <div>
                 <button class="submit">Sign Up</button>
                 <p>Already have an account? <a href="#" id="goToSignIn">Sign In</a></p>
             </div>
+        </form>
         </div>
         </div>
      

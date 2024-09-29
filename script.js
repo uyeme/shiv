@@ -144,4 +144,5 @@ document.addEventListener('DOMContentLoaded', () => {
         inputField.parentNode.appendChild(errorMessage);
         inputField.setAttribute('aria-describedby', errorMessage.id);
     }
+    return valid
 });

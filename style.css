@@ -239,5 +239,9 @@ footer p a:hover {
             margin-bottom: 10px; /* Add spacing between buttons */
         }
     }
+
+    .error{
+        color: red;
+    }
     
  
